@@ -1,0 +1,187 @@
+/* Variables de couleurs pour tester différentes combinaisons */
+:root {
+    --primary-color: #ff4f4f;
+    --secondary-color: #4fafff;
+    --background-color: #f8f8f8;
+    --text-color: #333;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+main {
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.photos {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.photos img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.photos img:hover {
+    transform: scale(1.1);
+}
+
+.description {
+    max-width: 500px;
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #3b8ddb;
+}
+
+footer {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Section Pourquoi adopter */
+.why-adopt {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.why-adopt h2 {
+    color: var(--primary-color);
+}
+
+.why-adopt p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Section Points forts et petits défauts */
+.qualities {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.points {
+    display: flex;
+    justify-content: space-between;
+}
+
+.strengths, .weaknesses {
+    width: 48%;
+}
+
+.strengths h3 {
+    color: green;
+}
+
+.weaknesses h3 {
+    color: red;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* Section Témoignages */
+.testimonials {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.testimonial {
+    background: #f1f1f1;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 16px;
+}
+
+strong {
+    color: var(--secondary-color);
+}
+
+/* Animation des témoignages */
+.testimonial {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Animation zoom/dézoom des photos */
+@keyframes zoomEffect {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.photos img.zoom {
+    animation: zoomEffect 2s infinite;
+}
